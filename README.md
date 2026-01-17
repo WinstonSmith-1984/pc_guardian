@@ -61,7 +61,7 @@ sudo ~/enp1s0_env/bin/streamlit run network_guardian.py
 *(defaults to Wired Eth0: ~/enp1s0 ) but once in the app, a drop down menu exists to use whatever network interface is available.  
 (enp1s0_env) guest@M5-PLUS:~$ sudo ~/enp1s0_env/bin/streamlit run ~/network_guardian.py
 
-" You can now view your Streamlit app in your browser" :
+" You can now view your Streamlit app in your browser" e.g. :
 
   Local URL: http://localhost:8537
   Network URL: http://172.16.0.2:8537
