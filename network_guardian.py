@@ -1,6 +1,7 @@
 import streamlit as st
 import pyshark
 import plotly.graph_objects as go
+import plotly.express as px
 import pandas as pd
 import threading
 import time
@@ -34,13 +35,15 @@ def get_geo_location(ip, state):
         return
     
     try:
-        r = requests.get(f"http://ip-api.com/json/{ip}?fields=status,city,country,isp,lat,lon", timeout=2).json()
+        r = requests.get(f"http://ip-api.com/json/{ip}?fields=status,city,country,isp,org,as,lat,lon", timeout=2).json()
         if r.get('status') == 'success':
             entry = {
                 'ip': ip,
                 'location': f"{r['city']}, {r['country']}",
                 'country': r.get('country', 'Unknown'),
                 'isp': r.get('isp', 'Unknown'),
+                'org': r.get('org', 'Unknown'),
+                'as': r.get('as', 'Unknown'),
                 'lat': r['lat'],
                 'lon': r['lon']
             }
@@ -162,11 +165,47 @@ with col2:
     fig_pps.update_layout(height=250, margin=dict(t=50, b=0), title="Packets Per Second")
     st.plotly_chart(fig_pps, use_container_width=True)
 
+# Main Visual Row
 map_col, data_col = st.columns([1.5, 1])
+MAP_HEIGHT = 450 
+
 with map_col:
-    st.caption("🌍 Traffic Origin Map")
+    st.caption("🌍 Traffic Origin Map (Hover for WHOIS)")
     if st.session_state.monitor.geo_data:
-        st.map(pd.DataFrame(st.session_state.monitor.geo_data), height=350)
+        df_geo = pd.DataFrame(st.session_state.monitor.geo_data)
+        
+        fig_map = px.scatter_geo(
+            df_geo,
+            lat='lat',
+            lon='lon',
+            hover_name='ip',
+            hover_data={'lat': False, 'lon': False, 'location': True, 'isp': True, 'org': True, 'as': True},
+            projection="natural earth"
+        )
+        
+        fig_map.update_traces(
+            marker=dict(size=14, color='#e74c3c', symbol='circle', line=dict(width=1, color='white')),
+            hoverlabel=dict(
+                bgcolor="#f0f8ff",      # AliceBlue Background
+                font_size=16,           
+                font_color="#0000FF",   # BLUE FONT
+                font_family="Arial Black", 
+                bordercolor="#0000FF"
+            )
+        )
+        
+        fig_map.update_layout(
+            height=MAP_HEIGHT, 
+            margin=dict(l=0, r=0, t=0, b=0),
+            geo=dict(
+                showland=True,
+                landcolor="#2c3e50",
+                subunitcolor="#34495e",
+                countrycolor="#7f8c8d",
+                bgcolor="rgba(0,0,0,0)"
+            )
+        )
+        st.plotly_chart(fig_map, use_container_width=True)
     else:
         st.info("Listening for external traffic...")
 
@@ -177,13 +216,14 @@ with data_col:
         st.dataframe(df_geo.tail(5)[['ip', 'isp']], hide_index=True, use_container_width=True, height=150)
         
         st.caption("🏁 Traffic by Country & ISP")
-        # UPDATED: Aggregating Country + ISP
         summary_df = df_geo.groupby('country').agg({
             'ip': 'count',
             'isp': lambda x: ', '.join(x.unique())
         }).reset_index()
         summary_df.columns = ['Country', 'Packet Count', 'Detected ISPs']
-        st.dataframe(summary_df.sort_values(by='Packet Count', ascending=False), hide_index=True, use_container_width=True, height=200)
+        
+        # Aligned Height to match map
+        st.dataframe(summary_df.sort_values(by='Packet Count', ascending=False), hide_index=True, use_container_width=True, height=245)
     else:
         st.write("No external IPs logged.")
 
