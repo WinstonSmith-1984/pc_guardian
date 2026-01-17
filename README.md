@@ -34,11 +34,13 @@ A real-time network security monitoring dashboard built with Python, Streamlit, 
 
 🛠️ Prerequisites (Linux)
 
-: To run this program, ensure you have the required libraries pre-loaaded in the Os: pip install streamlit pyshark plotly pandas requests.
+: To run this program, ensure you have the required libraries pre-loaaded in the Os: pip install streamlit pyshark plotly pandas scapy requests.
 
 Since this program relies on pyshark, (cmd line Wireshark network protocol sniffer) you must have TShark installed:
 
 sudo apt update && sudo apt install tshark -y
+
+sudo apt update && sudo apt install python3-scapy -y
 
 to run from the cmd terminal:
 sudo ~/enp1s0_env/bin/streamlit run network_guardian.py
