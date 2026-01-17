@@ -26,5 +26,6 @@ Bash
 
 sudo apt update && sudo apt install tshark -y
 
-sudo ~/enp1s0_env/bin/streamlit run network_guardian.py      *(defaults to Wired Eth0: enp1s0 ) but once in the app, a drop down menu exists to use whatever interface is available.  
+sudo ~/enp1s0_env/bin/streamlit run network_guardian.py   
+*(defaults to Wired Eth0: enp1s0 ) but once in the app, a drop down menu exists to use whatever interface is available.  
 
