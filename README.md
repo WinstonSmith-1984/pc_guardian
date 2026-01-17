@@ -35,10 +35,12 @@ A real-time network security monitoring dashboard built with Python, Streamlit, 
 🛠️ Prerequisites (Linux)
 
 : To run this program, ensure you have the required libraries: pip install streamlit pyshark plotly pandas requests
-Since this uses pyshark, you must have TShark installed:  sudo apt update && sudo apt install tshark -y
+Since this uses pyshark, you must have TShark installed:
 
 sudo apt update && sudo apt install tshark -y
 
-sudo ~/enp1s0_env/bin/streamlit run network_guardian.py   
+to run from the cmd terminal:
+sudo ~/enp1s0_env/bin/streamlit run network_guardian.py
+
 *(defaults to Wired Eth0: enp1s0 ) but once in the app, a drop down menu exists to use whatever interface is available.  
 
