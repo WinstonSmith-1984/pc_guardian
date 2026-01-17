@@ -34,7 +34,20 @@ A real-time network security monitoring dashboard built with Python, Streamlit, 
 
 🛠️ Prerequisites (Linux)
 
+
+
+on a modern Linux system (PEP 668), use the following to bypass environment restrictions or use a virtual environment:  source /home/guest/enp1s0_env/bin/activate
+
+
 : To run this program, ensure you have the required libraries pre-loaaded in the Os: pip install streamlit pyshark plotly pandas scapy requests.
+
+sudo apt update
+sudo apt install python3-scapy python3-pyshark python3-plotly python3-pandas python3-requests -y
+
+# Install core dependencies
+source /home/guest/enp1s0_env/bin/activate
+pip install scapy
+
 
 Since this program relies on pyshark, (cmd line Wireshark network protocol sniffer) you must have TShark installed:
 
