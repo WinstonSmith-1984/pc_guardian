@@ -25,3 +25,6 @@ Since this uses pyshark, you must have TShark installed:
 Bash
 
 sudo apt update && sudo apt install tshark -y
+
+sudo ~/enp1s0_env/bin/streamlit run network_guardian.py
+
