@@ -2,7 +2,7 @@
 
 <p align="left">
 Hi , I'm Derek, a cybersecurity analyst. <a href="https://www.credly.com/badges/270c2310-e8c5-4216-b474-f24ff2d9cec4/public_url" target="_blank"> 🏅</a>  Specialising in developing **Living off the Land (LOTL)** detection and internal network threat intelligence software.
-   [![Signal](https://img.shields.io/badge/Signal-Contact%20Me-blue?style=flat-square&logo=signal&logoColor=white)](https://signal.me/#eu/89vdbTjG9CIOm4P9fsQh11rpyLnOKqhPyLRuyZFcipeOx2P_cyFIHLYrEVWteCPV)
+[![Encrypted Signal](https://img.shields.io/badge/Signal-End--to--End%20Encrypted-blue?style=flat-square&logo=signal&logoColor=white)](https://signal.me/#eu/89vdbTjG9CIOm4P9fsQh11rpyLnOKqhPyLRuyZFcipeOx2P_cyFIHLYrEVWteCPV)
 <a href="mailto:derekconlon&#64;hotmail&#46;co&#46;uk" title="Email">📫</a>
 
 # 🦀 
