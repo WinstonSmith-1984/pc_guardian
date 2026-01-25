@@ -10,8 +10,8 @@ Specialising in developing **Living off the Land (LOTL)** detection and internal
 
 ---
 
-### 🛡️ Contact:
-[![Encrypted Signal](https://img.shields.io/badge/Signal-End--to--End%20Encrypted-blue?style=flat-square&logo=signal&logoColor=white)](https://signal.me/#eu/89vdbTjG9CIOm4P9fsQh11rpyLnOKqhPyLRuyZFcipeOx2P_cyFIHLYrEVWteCPV)
+### 🛡️ Contact: [![Encrypted Signal](https://img.shields.io/badge/Signal-End--to--End%20Encrypted-blue?style=flat-square&logo=signal&logoColor=white)](https://signal.me/#eu/89vdbTjG9CIOm4P9fsQh11rpyLnOKqhPyLRuyZFcipeOx2P_cyFIHLYrEVWteCPV)
+
 # 🦀 
 
 **LOTL-LAN** (Living Off The Land - Local Area Network) is a real-time internal traffic sniffer and host analyst tool. Unlike traditional firewalls that monitor the perimeter, LOTL-LAN focuses on **East-West traffic**, identifying suspicious lateral movement, protocol abuse, and reconnaissance patterns within your internal network.
