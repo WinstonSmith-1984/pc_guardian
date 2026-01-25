@@ -4,7 +4,7 @@
 
 Hi, I'm Derek, a cybersecurity analyst. 🏅 
 
-I specialise in developing **Living off the Land (LOTL)** detection and  threat intelligence software for internal networks.
+I specialise in developing **Living off the Land (LOTL)** detection and  threat intelligence software (dashboards) for internal networks.
 
 ### 🛡️ Contact: [![Encrypted Signal](https://img.shields.io/badge/Signal-End--to--End%20Encrypted-blue?style=flat-square&logo=signal&logoColor=white)](https://signal.me/#eu/89vdbTjG9CIOm4P9fsQh11rpyLnOKqhPyLRuyZFcipeOx2P_cyFIHLYrEVWteCPV)
 ---
