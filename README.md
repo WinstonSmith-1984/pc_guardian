@@ -1,7 +1,7 @@
 # LOTL-LAN 🦀 (v1.9.57)
 
 <p align="left">
-Tactical <a href="https://www.credly.com/badges/270c2310-e8c5-4216-b474-f24ff2d9cec4/public_url" target="_blank">cybersecurity enthusiast 🏅</a> focused on **Living off the Land (LOTL) detection** and internal network threat intelligence.
+Tactical <a href="https://www.credly.com/badges/270c2310-e8c5-4216-b474-f24ff2d9cec4/public_url" target="_blank"> 🏅</a> Hi , I'm Derek, a cybersecurity analyst.  Specialising  on **Living off the Land (LOTL) detection** and internal network threat intelligence software development.
 
 </p>
   <a href="mailto:derekconlon&#64;hotmail&#46;co&#46;uk" title="Email">📫</a>
