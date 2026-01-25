@@ -1,3 +1,4 @@
+```markdown
 # # LOTL-LAN 🦀 (v1.9.57)
 
 <p align="left">
@@ -43,3 +44,26 @@ By focusing on **East-West traffic** and protocol-specific anomalies (LLMNR, NBN
 ### 1. Install Network Dependencies
 ```bash
 sudo apt-get install tshark
+
+```
+
+### 2. Initialize the Suite
+
+Ensure you are running with administrative privileges to allow packet capture:
+
+```bash
+streamlit run lotl_lan.py
+
+```
+
+---
+
+## 📬 Contact & Connect
+
+If you have questions regarding the technical architecture of this suite or wish to discuss security analyst opportunities:
+
+> **"Visibility is the first step toward defense."**
+
+```
+
+```
