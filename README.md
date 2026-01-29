@@ -19,9 +19,18 @@ Hi, I'm Derek, a cybersecurity analyst. 🏅 I specialize in developing **Living
 ## 🚀 Key Features
 
 * **Passive Sniffer Engine**: Utilizes `PyShark` (TShark) to perform live packet capture across any system interface.
-* **Lateral Movement Detection**: Automatically flags internal connections (192.168.x.x) to identify potential pivoting or unauthorized internal scans.
+* **Lateral Movement Detection**: Automatically flags internal connections (e.g., `192.168.x.x`) to identify potential pivoting or unauthorized internal scans.
 * **Protocol Intelligence Engine**: Specifically monitors for protocols used in "Living off the Land" attacks, such as **NBNS**, **LLMNR**, and **ARP**.
-* **Visual Telemetry**: Real-time breakdown of network traffic types and dynamic RAG (Red-Amber-Green) security status alerts.
+* **Visual Telemetry**: Real-time breakdown of network traffic types and dynamic **RAG (Red-Amber-Green)** security status alerts.
+
+---
+
+## ⚖️ Legal Disclaimer
+
+> [!IMPORTANT]
+> **LOTL-LAN is intended for authorized security auditing, network troubleshooting, and educational purposes only.**
+>
+> Intercepting network traffic may be illegal in your jurisdiction without explicit permission from the network owner. By using this software, you agree that you are responsible for your own actions. The developer (Derek) assumes no liability and is not responsible for any misuse or damage caused by this program. **Always ensure you have written consent before monitoring traffic on any network you do not own.**
 
 ---
 
@@ -39,7 +48,7 @@ No Python installation is required. This is the fastest way to get started.
 1. Ensure you have **Python 3.10+** and **TShark** installed.
 2. Clone & Install:
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/lotl-lan.git](https://github.com/YOUR_USERNAME/lotl-lan.git)
+   git clone [https://github.com/WinstonSmith-1984/LIVING-OFF-THE-LAND-.git](https://github.com/WinstonSmith-1984/LIVING-OFF-THE-LAND-.git)
    cd lotl-lan
    pip install streamlit pandas plotly pyshark
    streamlit run main.py
