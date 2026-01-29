@@ -31,7 +31,7 @@ Hi, I'm Derek, a cybersecurity analyst. 🏅 I specialize in developing **Living
 No Python installation is required. This is the fastest way to get started.
 
 1. **Prerequisite**: You must have **TShark** (Wireshark) installed on your system.
-2. Go to the **[Releases](https://github.com/YOUR_USERNAME/lotl-lan/releases)** page.
+2. Go to the **[Releases](https://github.com/WinstonSmith-1984/LIVING-OFF-THE-LAND-/releases/latest)** page.
 3. Download the binary for your OS (e.g., `lotl-lan-windows.exe` or `lotl-lan-linux`).
 4. Run the file. (See **Security Notes** below regarding permissions).
 
