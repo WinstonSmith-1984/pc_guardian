@@ -19,7 +19,12 @@ pip install -r requirements.txt && \
 echo "🚀 Launching LOTL-LAN (v1.9.57)..." && \
 streamlit run LOTL.py
 
+----------------------------------------------
+The "One-Liner" for Terminal
+Mac/Linux:
+Bash
 
+python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt && streamlit run LOTL.py
 ---------------------------------
 
 For Windows (setup.bat)
@@ -37,25 +42,25 @@ echo 🚀 Launching LOTL-LAN (v1.9.57)...
 streamlit run LOTL.py
 pause
 
+
+Windows: (Poweshell) " 1liner" 
+python -m venv .venv; .\ .venv\Scripts\Activate.ps1; pip install -r requirements.txt; streamlit run LOTL.py
 ---------------------------------
 3. Instructions 
 
-    How to run the LOTL-LAN Sandbox:
+How to run the LOTL-LAN Sandbox:
+System Prerequisite: Ensure you have Wireshark (TShark) installed on your computer, as this app needs it to capture live network traffic.
+Run the Script: Copy the setup script into your project folder and run it.
 
-        System Prerequisite: Ensure you have Wireshark (TShark) installed on your computer, as this app needs it to capture live network traffic.
-
-        Run the Script: Copy the setup script into your project folder and run it.
-
-        Why use the Sandbox? This creates an isolated "environment" for the app. It prevents the network analysis libraries from cluttering your computer's main settings and ensures the app has the exact versions of pyshark and plotly it needs to visualize your traffic.
+Why use the Sandbox? 
+This creates an isolated "environment" for the app. It prevents the network analysis libraries from cluttering your computer's main settings and ensures the app has the exact versions of pyshark and plotly it needs to visualize your traffic.
 
 
-4. The "One-Liner" for Terminal
 
-paste this into their terminal:
 
-Mac/Linux:
-Bash
 
-python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt && streamlit run LOTL.py
+
+
+
 
 
