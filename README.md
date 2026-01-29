@@ -1,36 +1,45 @@
----
+# LOTL-LAN 🦀 (v1.9.57)
 
-## 📦 Easy Installation (Standalone Executables)
-Standalone binaries are available for users who want to run **LOTL-LAN** without a full Python environment.
+<p align="left">
+Hi, I'm Derek, a cybersecurity analyst. 🏅 I specialize in developing **Living off the Land (LOTL)** detection and threat intelligence software for internal networks.
+</p>
 
-1. **Prerequisite**: You **must** have TShark installed on your machine for the sniffer to work:
-   - **Windows**: [Download Wireshark](https://www.wireshark.org/download.html) (includes TShark).
-   - **Linux**: `sudo apt install tshark`
-2. **Download the Binary**: Go to the [Releases](https://github.com/YOUR_USERNAME/lotl-lan/releases) page.
-3. **Run**:
-   - **Linux**: `sudo ./lotl-lan-ubuntu`
-   - **Windows**: Run `lotl-lan-windows.exe` as **Administrator**.
+### 🛡️ Contact: [![Encrypted Signal](https://img.shields.io/badge/Signal-End--to--End%20Encrypted-blue?style=flat-square&logo=signal&logoColor=white)](https://signal.me/#eu/89vdbTjG9CIOm4P9fsQh11rpyLnOKqhPyLRuyZFcipeOx2P_cyFIHLYrEVWteCPV)
 
 ---
 
-## 🛡️ Security & Analyst Notes
+**LOTL-LAN** (Living Off The Land - Local Area Network) is a real-time internal traffic sniffer and host analyst tool. Unlike traditional firewalls that monitor the perimeter, LOTL-LAN focuses on **East-West traffic**, identifying suspicious lateral movement, protocol abuse, and reconnaissance patterns within your internal network.
 
-### 1. Elevated Privileges Required
-Passive network sniffing requires "Promiscuous Mode" access to your network interface.
-* **Linux**: You must use `sudo` to allow the internal `PyShark` engine to bind to the interface.
-* **Windows**: Running as Administrator is required to access the Npcap/WinPcap driver.
-
-### 2. Antivirus & LOTL Flagging
-Because this tool is named **LOTL-LAN** and performs network sniffing, it may be flagged by EDR or Antivirus software as a "Potentially Unwanted Application" (PUA).
-* **Code Integrity**: This project is open-source. We encourage security analysts to audit the code and build their own binaries using the instructions in the `Development` section.
-
-### 3. TShark Pathing
-If the executable cannot find TShark, ensure it is added to your system's `PATH`. On Windows, the default path is usually `C:\Program Files\Wireshark`.
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
+![License](https://img.shields.io/badge/License-GPL--3.0-blue?style=for-the-badge)
 
 ---
 
-## ⚖️ Disclaimer
-**For Authorized Security Auditing Only.** LOTL-LAN is designed for internal network threat hunting. By using this software, you agree:
-* You have explicit permission to monitor the network traffic you are sniffing.
-* The author is not responsible for any misuse, legal consequences, or network instability caused by this tool.
-* This tool is provided "as is" with no warranty.
+## 🚀 Key Features
+
+* **Passive Sniffer Engine**: Utilizes `PyShark` (TShark) to perform live packet capture across any system interface.
+* **Lateral Movement Detection**: Automatically flags internal connections (192.168.x.x) to identify potential pivoting or unauthorized internal scans.
+* **Protocol Intelligence Engine**: Specifically monitors for protocols used in "Living off the Land" attacks, such as **NBNS**, **LLMNR**, and **ARP**.
+* **Visual Telemetry**: Real-time breakdown of network traffic types and dynamic RAG (Red-Amber-Green) security status alerts.
+
+---
+
+## 📦 Installation & Setup
+
+### Option A: Standalone Executable (Easy / Recommended)
+No Python installation is required. This is the fastest way to get started.
+
+1. **Prerequisite**: You must have **TShark** (Wireshark) installed on your system.
+2. Go to the **[Releases](https://github.com/YOUR_USERNAME/lotl-lan/releases)** page.
+3. Download the binary for your OS (e.g., `lotl-lan-windows.exe` or `lotl-lan-linux`).
+4. Run the file. (See **Security Notes** below regarding permissions).
+
+### Option B: Manual Install (For Developers)
+1. Ensure you have **Python 3.10+** and **TShark** installed.
+2. Clone & Install:
+   ```bash
+   git clone [https://github.com/YOUR_USERNAME/lotl-lan.git](https://github.com/YOUR_USERNAME/lotl-lan.git)
+   cd lotl-lan
+   pip install streamlit pandas plotly pyshark
+   streamlit run main.py
